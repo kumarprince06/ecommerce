@@ -16,7 +16,7 @@
                                <a class="nav-link" href="#best seller"><i class="fa fa-shopping-bag"></i>Best Selling</a>
                            </li>
                            <li class="nav-item">
-                               <a class="nav-link" href="#"><i class="fa fa-plus-square"></i>New Arrivals</a>
+                               <a class="nav-link" href="#New Arrival"><i class="fa fa-plus-square"></i>New Arrivals</a>
                            </li>
                            <li class="nav-item">
                                <a class="nav-link" href="kids.php"><i class="fa fa-plus-square"></i>Kids</a>
@@ -201,7 +201,7 @@
    </div>
    <!-- Call to Action End -->
 
-   <!-- Featured Product Start -->
+   <!-- Best Selling Product Start -->
    <div class="featured-product product">
        <div class="container-fluid">
            <div class="section-header">
@@ -352,11 +352,11 @@
    </div>
    <!-- Newsletter End -->
 
-   <!-- Recent Product Start -->
+   <!-- New Arrival Product Start -->
    <div class="recent-product product">
        <div class="container-fluid">
            <div class="section-header">
-               <h1>Recent Product</h1>
+               <h1 id="New Arrival">Recent Product</h1>
            </div>
            <div class="row align-items-center product-slider product-slider-4">
 

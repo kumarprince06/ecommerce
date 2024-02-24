@@ -22,8 +22,8 @@ if(isset($_POST['login'])){
 
         if ($row == 1) {
 
-            $_SESSION['userName'] = $row_detail['firstName'];
-            $_SESSION['customerID'] = $row_detail['customerID'];
+            $_SESSION['firstName'] = $row_detail['firstName'];
+            $_SESSION['CustomerID'] = $row_detail['CustomerID'];
         
             header("location:../index.php");
 

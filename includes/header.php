@@ -27,6 +27,7 @@ include 'includes/dbcon.php'; ?>
 
         <!-- Template Stylesheet -->
         <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/productPagination.css" rel="stylesheet">
     </head>
 
     <body>
@@ -68,13 +69,13 @@ include 'includes/dbcon.php'; ?>
                         </div>
                         <div class="navbar-nav ml-auto">
                             <div class="nav-item dropdown">
-                                <?php if(isset($_SESSION['userName'])): ?>
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><?php echo $_SESSION['userName']; ?></a>
+                                <?php if(isset($_SESSION['firstName'])): ?>
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><?php echo $_SESSION['firstName']; ?></a>
                                 <?php else: ?>
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
                                 <?php endif; ?>
                                 <div class="dropdown-menu">
-                                <?php if(!isset($_SESSION['customerID'])): ?>
+                                <?php if(!isset($_SESSION['CustomerID'])): ?>
                                     <a href="login_register.php" class="dropdown-item">Login & Register</a>
                                 <?php else: ?>
                                     <a href="includes/logout_process.php" class="dropdown-item">Logout</a>

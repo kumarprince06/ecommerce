@@ -40,11 +40,11 @@
                         </div>
                         <div class="col-md-6">
                             <label>Password</label>
-                            <input class="form-control" name="pwd" type="text" placeholder="Password">
+                            <input class="form-control" name="pwd" type="password" placeholder="Password">
                         </div>
                         <div class="col-md-6">
                             <label>Retype Password</label>
-                            <input class="form-control" name="c_pwd" type="text" placeholder="Password">
+                            <input class="form-control" name="c_pwd" type="password" placeholder="Password">
                         </div>
                         <div class="col-md-12">
                             <button class="btn" type="submit" name="register">Register</button>
@@ -76,7 +76,7 @@
                         </div>
                         <div class="col-md-6">
                             <label>Password</label>
-                            <input name="pwd" class="form-control" type="text" placeholder="Password">
+                            <input name="pwd" class="form-control" type="password" placeholder="Password">
                         </div>
                         
                         <div class="col-md-12">
