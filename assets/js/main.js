@@ -236,18 +236,3 @@
         }
     });
 })(jQuery);
-
-// Pagination Method to move directly on any page
-
-// function go2Page() {
-//     var pageInput = document.getElementById("page");
-//     var page = pageInput.value;
-
-//     <?php echo "var numberOfPages = $numberOfPages"; ?>
-
-//     if (page >= 1 && page <= numberOfPages) {
-//         window.location.href = 'kids.php?page=' + page;
-//     } else {
-//         alert('Please enter a valid page number.');
-//     }
-// }

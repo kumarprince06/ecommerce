@@ -29,7 +29,7 @@ if(isset($_POST['login'])){
 
         }
         else {
-            // header("location:../login_register.php?login_error=Invalid credentials..!");
+            header("location:../login_register.php?login_error=Invalid credentials..!");
         }
     }
 }

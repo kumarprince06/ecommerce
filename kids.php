@@ -1,6 +1,18 @@
 <?php include 'includes/dbcon.php'; ?>
 <?php include "includes/header.php"; ?>
 
+ <!-- Breadcrumb Start -->
+ <div class="breadcrumb-wrap">
+            <div class="container-fluid">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                    <li class="breadcrumb-item"><a href="products.php">Products</a></li>
+                    <li class="breadcrumb-item active">Kids</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Breadcrumb End -->
+
 <!-- Product List Start -->
 <div class="product-view">
     <div class="container-fluid">
@@ -80,19 +92,19 @@
                     <nav class="navbar bg-light">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-female"></i>Fashion & Beauty</a>
+                                <a class="nav-link" href="fashionBeauty.php"><i class="fa fa-female"></i>Fashion & Beauty</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="kids.php"><i class="fa fa-child"></i>Kids & Babies Clothes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-tshirt"></i>Men & Women Clothes</a>
+                                <a class="nav-link" href="menWomen.php"><i class="fa fa-tshirt"></i>Men & Women Clothes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-mobile-alt"></i>Gadgets & Accessories</a>
+                                <a class="nav-link" href="gadget.php"><i class="fa fa-mobile-alt"></i>Gadgets & Accessories</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-microchip"></i>Electronics & Accessories</a>
+                                <a class="nav-link" href="electronics.php"><i class="fa fa-microchip"></i>Electronics & Accessories</a>
                             </li>
                         </ul>
                     </nav>

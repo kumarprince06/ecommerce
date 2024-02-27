@@ -1,6 +1,18 @@
 <?php include 'includes/dbcon.php'; ?>
 <?php include "includes/header.php"; ?>
 
+ <!-- Breadcrumb Start -->
+ <div class="breadcrumb-wrap">
+            <div class="container-fluid">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                    <li class="breadcrumb-item active">Products</li>
+                    <!-- <li class="breadcrumb-item active">Cart</li> -->
+                </ul>
+            </div>
+        </div>
+        <!-- Breadcrumb End -->
+
 <!-- Product List Start -->
 <div class="product-view">
     <div class="container-fluid">
@@ -27,23 +39,27 @@
                     $query = "SELECT * FROM product LIMIT $pageFirstResult, $resultsPerPage";
                     $result = mysqli_query($con, $query);
 
-                    while ($row = mysqli_fetch_array($result)) {
-                        echo '<div class="col-md-4">';
-                        echo '<div class="product-item">';
-                        echo '<div class="product-title">';
-                        echo '<a href="product_detail.php">' . $row['ProductName'] . '</a>';
-                        echo '</div>';
-                        echo '<div class="product-image">';
-                        echo '<a href="product_detail.php">';
-                        echo '<img src="assets/img/' . $row['imageName'] . '" alt="Product Image">';
-                        echo '</a>';
-                        echo '</div>';
-                        echo '<div class="product-price">';
-                        echo '<h3><span>₹ </span>' . $row['Price'] . '</h3>';
-                        echo '<a class="btn" href="cart.php"><i class="fa fa-shopping-cart"></i>Buy Now</a>';
-                        echo '</div>';
-                        echo '</div>';
-                        echo '</div>';
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_array($result)) {
+                            echo '<div class="col-md-4">';
+                            echo '<div class="product-item">';
+                            echo '<div class="product-title">';
+                            echo '<a href="product_detail.php">' . $row['ProductName'] . '</a>';
+                            echo '</div>';
+                            echo '<div class="product-image">';
+                            echo '<a href="product_detail.php">';
+                            echo '<img src="assets/img/' . $row['imageName'] . '" alt="Product Image">';
+                            echo '</a>';
+                            echo '</div>';
+                            echo '<div class="product-price">';
+                            echo '<h3><span>₹ </span>' . $row['Price'] . '</h3>';
+                            echo '<a class="btn" href="cart.php"><i class="fa fa-shopping-cart"></i>Add To Cart</a>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                        }
+                    }else{
+                        echo '<div class="col-md-12"><h3>No products availabe. Please visit after sometimes..!!</h3></div>';
                     }
                     ?>
                 </div>
@@ -65,10 +81,12 @@
                             }
                             ?>
                         </div>
-                        <div class="inline">
-                            <input id="page" type="number" min="1" max="<?php echo $numberOfPages; ?>" placeholder="<?php echo $page . "/" . $numberOfPages; ?>" required>
-                            <button onClick="go2Page(<?php echo $page; ?>, <?php echo $numberOfPages; ?>);">Go</button>
-                        </div>
+                        <?php if ($numberOfPages > 1) : ?>
+                            <div class="inline">
+                                <input id="page" type="number" min="1" max="<?php echo $numberOfPages; ?>" placeholder="<?php echo $page . "/" . $numberOfPages; ?>" required>
+                                <button onClick="go2Page(<?php echo $page; ?>, <?php echo $numberOfPages; ?>);">Go</button>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </center>
 
@@ -86,13 +104,13 @@
                                 <a class="nav-link" href="kids.php"><i class="fa fa-child"></i>Kids & Babies Clothes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-tshirt"></i>Men & Women Clothes</a>
+                                <a class="nav-link" href="menWomen.php"><i class="fa fa-tshirt"></i>Men & Women Clothes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-mobile-alt"></i>Gadgets & Accessories</a>
+                                <a class="nav-link" href="gadget.php"><i class="fa fa-mobile-alt"></i>Gadgets & Accessories</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-microchip"></i>Electronics & Accessories</a>
+                                <a class="nav-link" href="electronics.php"><i class="fa fa-microchip"></i>Electronics & Accessories</a>
                             </li>
                         </ul>
                     </nav>
